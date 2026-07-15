@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Manrope:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500;1,9..144,600;1,9..144,700&display=swap');
+@import url('https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 50 35% 97%;
+    --foreground: 153 16% 11%;
+    --card: 0 0% 100%;
+    --card-foreground: 153 16% 11%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 153 16% 11%;
+    --primary: 155 84% 36%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 137 28% 95%;
+    --secondary-foreground: 155 84% 25%;
+    --muted: 137 28% 95%;
+    --muted-foreground: 143 5% 31%;
+    --accent: 155 84% 36%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 75 16% 90%;
+    --input: 75 16% 90%;
+    --ring: 155 84% 36%;
+    --chart-1: 155 84% 36%;
+    --chart-2: 155 50% 55%;
+    --chart-3: 143 5% 31%;
+    --chart-4: 43 60% 55%;
+    --chart-5: 27 70% 55%;
+    --radius: 0.75rem;
+    --font-heading: 'Fraunces', ui-serif, Georgia, 'Times New Roman', serif;
+    --font-body: 'Manrope', ui-sans-serif, system-ui, sans-serif;
+    --font-display: 'Syne', ui-sans-serif, system-ui, sans-serif;
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    --sidebar-background: 50 35% 97%;
+    --sidebar-foreground: 153 16% 11%;
+    --sidebar-primary: 155 84% 36%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 137 28% 95%;
+    --sidebar-accent-foreground: 153 16% 11%;
+    --sidebar-border: 75 16% 90%;
+    --sidebar-ring: 155 84% 36%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    font-family: 'Manrope', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Manrope', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+    background-color: #FAF9F4;
+    color: #17201C;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Fraunces', ui-serif, Georgia, 'Times New Roman', serif;
+    font-optical-sizing: auto;
+  }
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #FAF9F4; }
+::-webkit-scrollbar-thumb { background: rgba(15,169,104,0.3); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(15,169,104,0.5); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
